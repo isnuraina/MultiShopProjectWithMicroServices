@@ -17,4 +17,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Services\CategoryServices\ICategoryService.cs" />
+  </ItemGroup>
+
 </Project>
