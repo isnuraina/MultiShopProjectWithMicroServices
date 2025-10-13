@@ -1,4 +1,26 @@
+using MultiShop.Order.Application.Features.CQRS.Handlers.AddressHandlers;
+using MultiShop.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.AddScoped<GetAddressQueryHandler>();
+builder.Services.AddScoped<GetAddressByIdQueryHandler>();
+builder.Services.AddScoped<CreateAddressCommandHandler>();
+builder.Services.AddScoped<UpdateAddressCommandHandler>();
+builder.Services.AddScoped<RemoveAddressCommandHandler>();
+
+
+
+
+builder.Services.AddScoped<GetOrderDetailQueryHandler>();
+builder.Services.AddScoped<GetOrderDetailByIdQueryHandler>();
+builder.Services.AddScoped<CreateOrderDetailCommandHandler>();
+builder.Services.AddScoped<UpdateOrderDetailCommandQueryHandler>();
+builder.Services.AddScoped<RemoveOrderDetailCommandQueryHandler>();
+
+
+
 
 // Add services to the container.
 

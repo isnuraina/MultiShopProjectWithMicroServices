@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MultiShop.Order.Application.Features.CQRS.Commands.OrderDetailCommands;
 using MultiShop.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers;
 using MultiShop.Order.Application.Features.CQRS.Queries.OrderDetailQueries;
@@ -56,7 +55,7 @@ namespace MultiShop.Order.WebApi.Controllers
         public async Task<IActionResult> UpdateOrderDetail(UpdateOrderDetailCommand command)
         {
             await _updateOrderDetailCommandQueryHandler.Handle(command);
-            return Ok("Sifaris guncellendi!");
+            return Ok("Sifaris guncellendi! ");
         }
 
     }
